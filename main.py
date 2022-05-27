@@ -1,20 +1,49 @@
+from typing_extensions import Self
+
+
 class Student:
     # [assignment] Skeleton class. Add your code here
- def _init_(self, name, age, track, score):
-  self.name = ("Angel")
-  self.age = int(27)
-  self.track = ("full-stack")
-  self.score = (99.9)  
+
+ class Student:
+  def __init__(self, _name, _age, _track, _score):
+   self.name = _name
+   self.age = _age
+   self.track = _track
+   self.score = _score
   
- def sayHi(self):
-    print('Hello, my name is ' + self.name + ', I am ' + self.age + ' years old!' + 'i am in the' + self.track + 'hoping to get a score of '+ self.score)
+  def change_name(self, _name):
+   self.name = _name
+  def change_age(self, _age):
+   self.age = _age
+  def add_track(self, _track):
+   self.track = _track
+  def get_score(self):
+    return self.score
+p1 = Student("John", 36, "fullstack", 80.3)
+
+print(p1.name)
+print(p1.age)
+print(p1.track)
+print(p1.score)
+
+Student.change_name(p1, "Peter")
+print(p1.name)
+
+Student.change_age(p1, 34)
+print(p1.age)
+
+Student.add_track(p1, "UI/UX")
+print(p1.track)
+
+Student.get_score(p1)
+print(p1.score)
 
 
 
-# Bob = Student(name="Bob", age=26, tracks=["FE","BE"],score=20.90)
+Bob = Student(name="Bob", age=26, tracks=["FE","BE"],score=20.90)
 
-# #Expected methods
-# Bob.change_name("Peter")
-# Bob.change_age(34)
-# Bob.add_track("UI/UX")
-# Bob.get_score()
+#Expected methods
+Bob.change_name("Peter")
+Bob.change_age(34)
+Bob.add_track("UI/UX")
+Bob.get_score()
